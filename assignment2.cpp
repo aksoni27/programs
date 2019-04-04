@@ -37,21 +37,20 @@ void sorting2(int b[],int n)
  	}
 }
 int main()
-{ 	int n;
-    printf("\n\n\t**********************************************************************************\n");
+{ 	int n,no;
+ 	int head;
+	int prev_request;   
+ 	printf("\n\n\t**********************************************************************************\n");
 	printf("\t\t\tEnter the no. of cylinder in the disk : ");
 	scanf("%d",&n);
-	int a[n];
-	int b[9];
-	int head;
-	int prev_request;
+ 	printf("\t\t\tEnter no. of pending request : ");
+	scanf("%d",&no);
+	int a[n], b[no];
+	
 	for(int i=0;i<n;i++)
 	{
 		a[i]=i;
 	}
-	int no;
-	printf("\t\t\tEnter no. of pending request : ");
-	scanf("%d",&no);
 	printf("\t\t\tEnter queue of pending request (%d) : ",no);
 	for(int i=0;i<no;i++)
 	{
@@ -89,9 +88,9 @@ int main()
   	else
 	{
   		int n2=sizeof(b)/sizeof(b[0]);
-	    sorting2(b,n2);
+	        sorting2(b,n2);
 	/*	printf("sorted  queue2:");
-		for(int i=0;i<9;i++)
+		for(int i=0;i<no;i++)
 		{
 			printf("\t%d",b[i]);	
 		}*/
